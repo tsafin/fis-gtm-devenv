@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 # TODO - change OS version via arguments passed
-UBUNTU_VERSION=trusty
+UBUNTU_VERSION=${1:-trusty}
 
 BASE_IMAGE="fis-gtm-env:${UBUNTU_VERSION}"
 TempDockerBase=".Dockerfile.base"

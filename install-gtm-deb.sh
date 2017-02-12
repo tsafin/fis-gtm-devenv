@@ -2,12 +2,12 @@
 
 echo 'Preparing environment'
 
-sudo apt-get update
-#sudo apt-get install -y --no-install-recommends build-essential libelf-dev 
-#sudo apt-get install -y --no-install-recommends gzip openssh-server curl
+apt-get update
+#apt-get install -y --no-install-recommends build-essential libelf-dev 
+#apt-get install -y --no-install-recommends gzip openssh-server curl
 
 echo 'Installing GT.M'
-sudo apt-get install -y --no-install-recommends man-db openssh-server fis-gtm
+apt-get install -y --no-install-recommends man-db openssh-server fis-gtm
 
 actual_package=`apt-cache depends fis-gtm|grep Depends: | cut -f2,2 -d:`
 gtm_profile=`dpkg -L ${actual_package} | grep utf8/gtmprofile$`
